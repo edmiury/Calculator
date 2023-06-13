@@ -1,17 +1,15 @@
-import { StyleSheet } from 'react-native';
+ import { StyleSheet } from 'react-native';
 
 export const Style = StyleSheet.create({
+     
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: 'flex-end',
+        backgroundColor: '#111',
+        padding: 15,
+        width: '100%'
     },
 
-    txtInput: {
-        marginBottom: 20,
-        borderWidth: 0.5,
-        borderRadius: 10,
-        padding: 10,
-        fontWeight: 'bold'
-    }
-})
+});
+
+//#C7CEDB
