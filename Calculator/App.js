@@ -1,36 +1,50 @@
-import React, {useState} from "react";
+import React from "react";
 
 import { View } from "react-native";
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import FullProject from "./Components/Layout Final/fullProject";
+import Inputs from './Components/Calculation Imc/Inputs Weigth and Height/inputHeigthAndWeigth';
 import { Style } from "./style";
 
-import Result from "./Components/Result/result";
-
-import LayoutButtons from './Components/Buttons/buttons';
+const Stack = createStackNavigator();
 
 export default function App() {
 
-  const [value, setValue] = useState(0)
-  const [result, setResult] = useState(0)
-
   return (
 
-    <View style={Style.container}> 
+    <View style={Style.container}>
+          
+      <NavigationContainer>
+
+        <Stack.Navigator>
+
+          <Stack.Screen
+            name = 'Initial' 
+            component={FullProject}
+            options={{
+              title: '',
+              headerStyle: {
+                backgroundColor: '#111',
+              },
+              headerTransparent: true
+            }}
+          />
+          <Stack.Screen
+            name='inputs'
+            component={Inputs}
+            options={{
+              title: '',
+              headerTransparent: true
+            }}
+          />
+        </Stack.Navigator>
+
+      </NavigationContainer>
       
-      <Result
-        value= {value}
-        result={result}
-      />
-
-      <View >
-
-        <LayoutButtons
-          setValue={setValue}
-          setResult = {setResult}
-        />
-        
-      </View>
-
     </View>
+  
   );
 }

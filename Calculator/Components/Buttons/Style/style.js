@@ -39,5 +39,3 @@ export const Style = StyleSheet.create({
     } 
 
 });
-
-//#9C9B9B

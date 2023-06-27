@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Alert, View } from 'react-native';
+import {
+    Alert,
+    View,
+    Vibration
+} from 'react-native';
 import {Style} from './Style/style'
 
 import Layout from './layout';
@@ -35,8 +39,10 @@ export default props => {
             operators.sum = true;
         } catch {
             Alert.alert('Atenção', 'Dados inválidos!')
+            Vibration.vibrate()
             props.setValue('0')
             props.setResult('0')
+            operators.value = ''
         }
     };
 

@@ -2,11 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export const Style = StyleSheet.create({
 
-    view: {
-        justifyContent: 'flex-end'
-
-    },
-
     txtResult: {
         marginBottom: 10,
         padding: 5,
