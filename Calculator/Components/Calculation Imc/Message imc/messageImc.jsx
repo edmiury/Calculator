@@ -19,13 +19,13 @@ export default MessageImc = (props) => {
             <Text style={Styles.imc}> {props.resultImc} </Text>
             
             {
-                props.resultImc !== '' ? 
+                !props.resultImc  ? 
+                    <View />
+                    :
                     <Image
                         style = {Styles.imgCustom}
                         source = {require('../../../assets/tabelaImc.png')}
                     />
-                    :
-                    <View />
             }
             
 
