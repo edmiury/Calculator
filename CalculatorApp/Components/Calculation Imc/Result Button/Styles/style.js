@@ -10,8 +10,11 @@ export const Styles = StyleSheet.create({
         alignItems: 'center',
     },
 
+    viewTouchable: {
+        width: '100%'
+    },
+
     touchableTextCustom: {
-        width: '100%',
         borderRadius: 25,
         paddingVertical: 8,
         backgroundColor: '#9c9b9b'

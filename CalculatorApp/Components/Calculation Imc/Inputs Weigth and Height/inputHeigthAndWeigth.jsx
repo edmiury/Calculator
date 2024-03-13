@@ -22,7 +22,6 @@ export default WeightAndHeight = () => {
             onPress={() => Keyboard.dismiss() }
             style={Style.Container}> 
             
-            
             <Text style = {Style.CustomTitle}> Índice De Massa Corporal:</Text>
 
             <View style = {Style.ViewInputsCustom} >

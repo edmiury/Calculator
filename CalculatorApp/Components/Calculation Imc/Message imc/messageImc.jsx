@@ -3,7 +3,7 @@ import React from 'react'
 import {
     View,
     Text,
-    Image
+    Image,
 } from 'react-native';
 
 import {Styles} from './Styles/styles'
@@ -19,16 +19,12 @@ export default MessageImc = (props) => {
             <Text style={Styles.imc}> {props.resultImc} </Text>
             
             {
-                !props.resultImc  ? 
+                !props.resultImc ?
                     <View />
-                    :
-                    <Image
+                    : <Image
                         style = {Styles.imgCustom}
-                        source = {require('../../../assets/tabelaImc.png')}
-                    />
+                        source={require('../../../assets/tabelaImc.png')} />
             }
-            
-
         </View>
 
     );

@@ -18,9 +18,7 @@ export default function App() {
     <View style={Style.container}>
           
       <NavigationContainer>
-
         <Stack.Navigator>
-
           <Stack.Screen
             name = 'Initial' 
             component={FullProject}
@@ -41,7 +39,6 @@ export default function App() {
             }}
           />
         </Stack.Navigator>
-
       </NavigationContainer>
       
     </View>
